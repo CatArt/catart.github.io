@@ -1,0 +1,33 @@
+body{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #F8F9FB;
+}
+h2  {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+table   {
+    background-color: white;
+    margin: 0 auto;
+    width: 50%; 
+    border: 2px solid grey;
+    text-align: center;
+}
+th{
+    background: #9b9b9b;
+    color: white;
+    max-width: 150px;
+    min-height: 50px;
+}
+td{
+    width: 10%;
+}
+table td:first-child   {
+    background-color: #ffffdd;
+}
+tr{
+    height: 50px;
+}
