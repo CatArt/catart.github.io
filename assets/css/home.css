@@ -125,7 +125,7 @@ html {
     background-color: #fef7f1;
     background-image: url(../images/background.jpg);
     background-position: bottom center;
-    background-repeat: no-repeat
+    background-repeat: repeat-y;
 }
 
 blockquote,
