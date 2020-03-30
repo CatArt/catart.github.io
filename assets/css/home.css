@@ -119,6 +119,9 @@ body {
     padding-top: 40px;
     line-height: 1;
     /*min-width: 1200px;*/
+    
+}
+html {
     background-color: #fef7f1;
     background-image: url(../images/background.jpg);
     background-position: bottom center;
