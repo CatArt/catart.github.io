@@ -199,77 +199,141 @@ a {
     font-family: Calibri-Bold;
     src: url(../fonts/Calibri-Bold.ttf)
 }
-
 div.width-container {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
 }
 
-.float-left {
-    float: left
-}
-
-.float-right,
-header.header a.social {
-    float: right
-}
-
-.text-center {
-    text-align: center
-}
-
-.text-right {
-    text-align: right
-}
-
-.clearfix:after,
-.clearfix:before {
-    content: ' ';
-    display: table
-}
-
-.clearfix:after {
-    clear: both
-}
-
-header.header {
+header {
     background: #2d2c2c;
     height: 40px;
     position: fixed;
     width: 100%;
     z-index: 99999;
     top: 0;
-  left: 0;
+    left: 0;
 }
 
-header.header a {
-    color: #8b8b8b;
-    line-height: 40px;
-    font-size: 13px;
-    font-family: Roboto-Regular;
-    padding: 0 17px
+header li{
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    height: 40px;
 }
-
-header.header a:hover {
+header a:hover {
     color: #fff
 }
-
-ul.navigation-header {
-    margin-left: auto;
-    margin-right: auto;
+header ul{
     max-width: 750px;
-    text-align: center
+    text-align: center;
+    margin: 0 auto;
 }
 
-ul.navigation-header li {
-    display: inline-block
+header a {
+    color: #8b8b8b;
+    font-size: 13px;
+    line-height: 40px;
+    font-family: Roboto-Regular;
+    width: 100%;
+    padding: 0 17px;
 }
 
-ul.navigation-header li.active a,
-ul.navigation-header li:hover a {
+header li.active a,
+header li:hover a {
     color: #fff
 }
+
+
+/* BURGER*/
+.wrapper{
+    width: 100%;
+    background: #2d2c2c;
+    position: relative;
+    color: #8b8b8b;
+    height: 40px;
+    text-align: center;
+    font-family: 'Arial';
+}
+
+#check-menu{
+    display: none;
+}
+
+label{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: left;
+    width: 60px;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+    line-height: 40px;
+}
+
+.burger-line{
+    display: none;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+    transition: .5s all;
+}
+
+.second, .third{
+    top: 18px;
+}
+
+.fourth{
+    top: 28px;
+}
+
+.main-menu{
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    transition: .5s all;
+}
+.main-menu a{
+    display: none;
+    width: 100%;
+    color: #8b8b8b;
+    text-decoration: none;
+    border-top: 1px solid rgba(255,255,255,.3);
+    background-color: #2d2c2c;
+}
+
+#check-menu:checked ~ .main-menu{
+    max-height: 500px;
+    font-size: 16px;
+}
+
+#check-menu:checked ~ .first{
+    display: none;
+}
+
+#check-menu:checked ~ .second{
+    transform: rotate(45deg);
+}
+
+#check-menu:checked ~ .third{
+    transform: rotate(-45deg);
+}
+
+#check-menu:checked ~ .fourth{
+    display: none;
+}
+/*******************************/
 
 section.presentation {
     padding-top: 40px;
@@ -318,156 +382,14 @@ section.presentation div.start-game a.how-to-play {
     color: #fff
 }
 
-section.information,
 section.presentation {
     background-color: #ffeeda
 }
-
-section.information {
-    font-family: Solomon-Semibold;
-    background-image: url(../images/city-background.png);
-    background-position: center bottom;
-    background-repeat: no-repeat
-}
-
-section.information .info-col {
-    width: 33%
-}
-
-section.information .info-col .data.first {
-    padding: 0 55px
-}
-
-section.information .info-col .data.first .switcher {
-    margin-top: 30px;
-    margin-left: 30px
-}
-
-section.information .info-col .data.first .switcher span {
-    color: #bca385;
-    font-family: Solomon-Semibold;
-    font-size: 15px
-}
-
-section.information .info-col .data.first .switch-top {
-    border: 1px solid #bca385;
-    padding: 5px 11px;
-    text-align: center;
-    color: #bca385;
-    margin-left: -5px;
-    background: 0 0;
-    cursor: pointer
-}
-
-section.information .info-col .data.first .switch-top.active,
-section.information .info-col .data.first .switch-top:hover {
-    background: #bca385;
-    color: #fff
-}
-
-section.information .info-col .data.second {
-    padding: 0 0 0 50px
-}
-
-section.information .info-col .data.second .go-to-forum {
-    background: #bca385;
-    display: inline-block;
-    padding: 10px 15px;
-    color: #fff;
-    margin-top: 25px;
-    margin-bottom: 15px
-}
-
-section.information .info-col .data.second .go-to-forum:hover {
-    background: #c5af94
-}
-
-section.information .info-col .data.third {
-    padding: 0 0 0 80px
-}
-
-section.information .info-col .info-row {
-    margin-bottom: 25px
-}
-
-section.information .info-col .info-row div {
-    height: 100%
-}
-
-section.information h1 {
-    font-size: 25px;
-    padding-bottom: 32px;
-    padding-top: 60px;
-    text-align: center
-}
-
-section.information .info,
-section.information .level,
-section.information a,
-section.information h1 {
-    color: #6c6266
-}
-
-section.information .icon {
-    line-height: 35px
-}
-
-section.information .icon img {
-    vertical-align: middle
-}
-
-section.information .info {
-    margin-left: 10px;
-    line-height: 17px
-}
-
-section.information .title {
-    font-size: 15px
-}
-
-section.information .desc {
-    display: block;
-    font-size: 12px
-}
-
-div.project-name,
-footer.footer ul.navigation-footer li {
+div.project-name{
     display: inline;
     text-align: center;
 }
 
-section.information .desc span {
-    color: #998b91
-}
-
-section.information .level {
-    font-size: 15px;
-    line-height: 35px
-}
-
-section.news .title {
-    height: 220px;
-    line-height: 220px;
-    color: #6c6266;
-    font-size: 25px;
-    background: -webkit-linear-gradient(#f7dec5, #fef7f1);
-    background: -moz-linear-gradient(#f7dec5, #fef7f1);
-    background: -o-linear-gradient(#f7dec5, #fef7f1);
-    background: -ms-linear-gradient(#f7dec5, #fef7f1);
-    background: linear-gradient(#f7dec5, #fef7f1);
-    font-family: Solomon-Semibold;
-    text-align: center
-}
-
-section.news article.news-container {
-    width: 47.5%;
-    float: left;
-    margin-bottom: 50px
-}
-
-section.news article.news-container:nth-child(odd) {
-    margin-right: 2.5%
-}
 
 div.project-description,
 div.server-stats {
@@ -476,82 +398,6 @@ div.server-stats {
     margin-right: auto
 }
 
-section.news article.news-container:nth-child(even) {
-    margin-left: 2.5%
-}
-
-section.news header.news-header {
-    height: 70px;
-    line-height: 70px;
-    color: #6c6266;
-    font-family: Solomon-Semibold;
-    font-size: 20px;
-    background-color: #ffeeda;
-    padding: 0 25px 0 20px
-}
-
-section.news header.news-header div.postdate {
-    float: right;
-    color: #c7b7a4
-}
-
-section.news header.news-header img {
-    vertical-align: middle;
-    width: 35px
-}
-
-section.news div.news-title {
-    position: relative
-}
-
-section.news div.news-title img {
-    width: 100%
-}
-
-section.news div.news-title span {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: #fff;
-    font-family: Roboto-Regular;
-    font-size: 17px
-}
-
-section.news div.news-title a {
-    color: #fff
-}
-
-section.news div.news-body {
-    background: #fff
-}
-
-section.news div.news-body div.news-content {
-    padding: 20px 10px;
-    color: #6c6266;
-    font-family: Roboto-Regular;
-    font-size: 14px;
-    border: 1px solid #ddd1c2;
-    border-top: none;
-    height: 240px;
-    line-height: 23px
-}
-
-section.news div.news-body div.news-content ol,
-section.news div.news-body div.news-content ul {
-    margin-left: 20px
-}
-
-section.news div.news-body div.overflow {
-    overflow: hidden;
-    height: 230px
-}
-
-section.news div.news-body a.go-to-news {
-    text-decoration: underline;
-    font-family: Solomon-Semibold;
-    font-size: 14px;
-    color: #706266
-}
 
 div.project-name {
     color: #fff;
@@ -618,12 +464,11 @@ table.stats td {
 table.stats td:nth-child(1) {
     text-align: left;
     padding-left: 20px;
-    width: 30%
+    width: 30%;
+    border-right: 1px solid #686666;
 }
 
 table.stats td:nth-child(2) {
-    border-left: 1px solid rgba(255, 255, 255, .1);
-    border-right: 1px solid rgba(255, 255, 255, .1);
     text-align: center;
     width: 40%
 }
@@ -668,10 +513,17 @@ footer.footer p.project-copy {
 .copyright-inner {
     float: left;
 }
-/* Media-запросы */
-@media (max-width: 768px) {
-}
-@media (max-width: 480px) {
-}
-@media (max-width: 560px) {
+@media (max-width: 700px) {
+    .navigation__inner {
+        display: none
+    }
+    label {
+        display: block;
+    }
+    .burger-line {
+        display: grid;
+    }
+    .main-menu a {
+        display: block
+    }
 }
