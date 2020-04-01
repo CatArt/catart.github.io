@@ -264,7 +264,7 @@ label{
     display: none;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     float: left;
     width: 60px;
     height: 100%;
@@ -277,10 +277,10 @@ label{
     display: none;
     position: absolute;
     top: 8px;
-    right: 10px;
+    left: 10px;
     width: 35px;
     height: 2px;
-    background-color: #fff;
+    background-color: #8b8b8b;
     transition: .5s all;
 }
 
